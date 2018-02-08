@@ -3,11 +3,13 @@ import Home from "./components/home/Home.vue";
 
 export const routes = [
     {
-        path: '/',
-        component: Home
+        path: '',
+        component: Home,
+        titulo: 'Home'
     },
     {
         path: '/cadastro',
-        component: Cadastro
+        component: Cadastro,
+        titulo: 'Cadastro'
     }
 ];

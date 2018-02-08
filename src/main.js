@@ -6,13 +6,14 @@ import vueRouter from 'vue-router';
 
 import { routes } from './routes';
 
+Vue.use(vueResource)
 Vue.use(vueRouter);
-const router = vueRouter({
+const router = new vueRouter({
   routes,
   mode : 'history'
 });
 
-Vue.use(vueResource)
+
 
 new Vue({
   el: '#app',
