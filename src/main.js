@@ -6,6 +6,9 @@ import vueRouter from 'vue-router';
 
 import { routes } from './routes';
 
+//DIRETIVAS
+import './directives/Transform';
+
 Vue.use(vueResource)
 Vue.use(vueRouter);
 const router = new vueRouter({

@@ -5,8 +5,8 @@
     <ul class="lista-fotos">
       <li v-for="foto in fotosComFiltro" class="lista-fotos-item" >
         <meu-painel :titulo="foto.titulo">
-          <minha-imagem :url="foto.url" :titulo="foto.titulo" />
-          <meu-botao tipo="button" rotulo="REMOVER" @click.native="remove(foto)" />
+          <minha-imagem :url="foto.url" :titulo="foto.titulo" v-meu-transform="{incremento: 45, animate: true}" />
+          <meu-botao tipo="button" rotulo="REMOVER" @botaoAtivado="remove(foto)" :confirmacao="true" estilo="perigo" />
         </meu-painel>
       </li>
     </ul>
@@ -72,11 +72,7 @@ export default {
   },
   methods: {
     remove(foto) {
-      if (confirm("Remover a foto ("+foto.titulo+")?")) {
         alert("Foto removida");
-      }
-
-
     }
   }
 }
